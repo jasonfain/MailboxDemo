@@ -74,34 +74,6 @@
             </objects>
             <point key="canvasLocation" x="961" y="336"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fHI-hh-gTi">
-            <objects>
-                <viewController id="rjA-kp-qFd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dq5-ox-dP0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4lN-mM-FP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1375" y="336"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vhW-GV-w40">
-            <objects>
-                <viewController id="E6Z-Cl-93q" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jM8-iD-vXq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Maz-l8-3FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1743" y="336"/>
-        </scene>
     </scenes>
     <resources>
         <image name="archive_icon" width="25" height="25"/>
