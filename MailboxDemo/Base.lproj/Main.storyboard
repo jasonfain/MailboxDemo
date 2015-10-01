@@ -30,16 +30,16 @@
                                     </imageView>
                                     <view contentMode="center" id="FLg-7f-5j3">
                                         <rect key="frame" x="0.0" y="140" width="320" height="86"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="later_icon" id="jnn-tC-GLq">
-                                                <rect key="frame" x="118" y="0.0" width="83" height="86"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" image="later_icon" id="jnn-tC-GLq">
+                                                <rect key="frame" x="220" y="0.0" width="101" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.91291824494949492" green="0.76837911681006787" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="archive_icon" id="Gsi-Q7-7jg">
-                                                <rect key="frame" x="118" y="0.0" width="83" height="86"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" image="archive_icon" id="Gsi-Q7-7jg">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.032350464714344412" green="0.73753156565656564" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="0YF-Ef-DLH">
@@ -51,7 +51,7 @@
                                                 </connections>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.032350464709999999" green="0.7375315657" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.87339853759429553" green="0.85928858695159893" blue="0.90548058716464641" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                     </view>
                                 </subviews>
@@ -77,7 +77,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="961" y="336"/>
+            <point key="canvasLocation" x="961" y="335.5"/>
         </scene>
     </scenes>
     <resources>

@@ -43,14 +43,14 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
         } else if sender.state == UIGestureRecognizerState.Changed {
             print("moving")
             mailNewImageView.center.x = originalPosition.x + translation.x
-            mailNewImageView.center.y = originalPosition.y + translation.y
+          //  mailNewImageView.center.y = originalPosition.y + translation.y
         } else if sender.state == UIGestureRecognizerState.Ended {
             print("ended")
             
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 self.mailNewImageView.transform = CGAffineTransformMakeScale(1,1)
                 if velocity.x > 0 {
-                    self.mailNewImageView.center.x = 200
+                    self.mailNewImageView.center.x = 210
                 } else {
                     self.mailNewImageView.center.x = 100
                 }
