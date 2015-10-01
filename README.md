@@ -1,5 +1,5 @@
 # MailboxDemo
 
-So far 4 hours, but only starting the gestures.
+So far 10 hours, and finally got some gestures into the app.
 
 /cc @codepath
