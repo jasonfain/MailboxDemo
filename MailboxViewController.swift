@@ -10,7 +10,8 @@ import UIKit
 
 class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var mailNewViewController: UIView!
+    
+    @IBOutlet weak var mailNewImageView: UIImageView!
     
     @IBOutlet weak var mailScreenScrollView: UIScrollView!
     
@@ -18,48 +19,46 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         mailScreenScrollView.contentSize = CGSize(width: 320, height: 1435)
-        
-        var panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "onCustomPan:")
-        
-        
-        // Attach it to a view of your choice. If it's a UIImageView, remember to enable user interaction
-        
-        view.addGestureRecognizer(panGestureRecognizer)
     }
-    
-    func onCustomPanø(panGestureRecognizer: UIPanGestureRecognizer) {
-        var point = panGestureRecognizer.locationInView(view)
-        var velocity = panGestureRecognizer.velocityInView(view)
-        
-        if panGestureRecognizer.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
-            
-        } else if panGestureRecognizer.state == UIGestureRecognizerState.Changed {
-            print("Gesture changed at: \(point)")
-            
-        } else if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
-            print("Gesture ended at: \(point)")
-        }
-    }
-    
-    
-    // Do any additional setup after loading the view.
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var originalPosition: CGPoint!
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    @IBAction func onPan(sender: UIPanGestureRecognizer) {
+        sender.locationInView(view)
+        
+        let location = sender.locationInView(view)
+        let translation = sender.translationInView(view)
+        let velocity = sender.velocityInView(view)
+        
+        // NSLog("location: \(location.x):\(location.y)")
+        //  NSLog("translation: \(translation.x):\(translation.y)")
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            print("started")
+            originalPosition = mailNewImageView.center
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            print("moving")
+            mailNewImageView.center.x = originalPosition.x + translation.x
+            mailNewImageView.center.y = originalPosition.y + translation.y
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            print("ended")
+            
+            UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: [], animations: { () -> Void in
+                self.mailNewImageView.transform = CGAffineTransformMakeScale(1,1)
+                if velocity.x > 0 {
+                    self.mailNewImageView.center.x = 200
+                } else {
+                    self.mailNewImageView.center.x = 100
+                }
+                }, completion: { (completed) -> Void in
+            })
+            
+            //  @IBAction func onTap(sender: UITapGestureRecognizer) {
+            //    print("tapped")
+        }
     }
-    */
-    
 }
