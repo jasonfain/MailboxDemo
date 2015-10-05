@@ -33,15 +33,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="delete_icon" id="rV6-h7-5xO">
-                                                <rect key="frame" x="88" y="0.0" width="49" height="86"/>
+                                                <rect key="frame" x="196" y="0.0" width="49" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list_icon" id="vjP-LR-l46">
-                                                <rect key="frame" x="60" y="0.0" width="49" height="86"/>
+                                                <rect key="frame" x="76" y="0.0" width="49" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="archive_icon" id="Gsi-Q7-7jg">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="86"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="later_icon" id="jnn-tC-GLq">
