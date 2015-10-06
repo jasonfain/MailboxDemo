@@ -60,6 +60,10 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                     </view>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="reschedule" id="dkG-8m-gGD">
+                                        <rect key="frame" x="0.0" y="65" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                             <view contentMode="scaleToFill" id="rjK-zG-x84">
@@ -95,6 +99,7 @@
                         <outlet property="mailAllView" destination="FLg-7f-5j3" id="FSc-7x-nAc"/>
                         <outlet property="mailNewImageView" destination="0YF-Ef-DLH" id="N9i-ff-SUc"/>
                         <outlet property="mailScreenScrollView" destination="KMv-jQ-YMR" id="ZPE-HF-ylL"/>
+                        <outlet property="rescheduleImageView" destination="dkG-8m-gGD" id="alt-02-QXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JT3-vp-igZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,6 +124,7 @@
         <image name="mail_nav_icon" width="25" height="20"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
+        <image name="reschedule" width="320" height="568"/>
         <image name="search" width="320" height="42"/>
     </resources>
     <color key="tintColor" red="0.26666666666666666" green="0.66666666666666663" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var rescheduleImageView: UIImageView!
     @IBOutlet weak var mailAllView: UIView!
     
     @IBOutlet weak var mailNewImageView: UIImageView!
@@ -26,7 +27,11 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         mailScreenScrollView.contentSize = CGSize(width: 320, height: 1435)
+        
+        rescheduleImageView.alpha = 0
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,19 +51,21 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
         
         
         
+        
         if sender.state == UIGestureRecognizerState.Began {
             originalPosition = mailNewImageView.center
             if translation.x > 0 {
                 listImageView.alpha = 0
-                deleteImageView.alpha = 1
+                deleteImageView.alpha = 0
                 laterImageView.alpha = 0
                 archiveImageView.alpha = 1
+                
                 
             } else if translation.x < 0 {
                 
                 laterImageView.alpha = 1
                 archiveImageView.alpha = 0
-                listImageView.alpha = 1
+                listImageView.alpha = 0
                 deleteImageView.alpha = 0
             }
             print("started")
@@ -78,13 +85,13 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
             }
                 
             else if translation.x > 60 {
-//     archiveImageView.center.x =originalPosition.x + translation.x - 80
+                //     archiveImageView.center.x =originalPosition.x + translation.x - 80
                 
-            archiveImageView.center.x = translation.x - archiveImageView.bounds.width/2
+                archiveImageView.center.x = translation.x - archiveImageView.bounds.width/2
                 archiveImageView.alpha = 1
                 deleteImageView.alpha = 0
-        
-                mailAllView.backgroundColor = UIColor.greenColor()
+                
+                mailAllView.backgroundColor = UIColor.init(hue: 0.2806, saturation: 1, brightness: 0.86, alpha: 1.0)
                 
             } else if translation.x < -260 {
                 
@@ -95,16 +102,21 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
                 laterImageView.alpha = 0
                 mailAllView.backgroundColor = UIColor.brownColor()
                 
-
-            
+                
+                
             } else if translation.x < -60 {
-                    
+                
                 laterImageView.center.x = translation.x + laterImageView.bounds.width/2 +
                     // self.view.bounds.width
-                 320
-                    laterImageView.alpha = 1
+                320
+                laterImageView.alpha = 1
                 listImageView.alpha = 0
-                mailAllView.backgroundColor = UIColor.yellowColor()
+                
+                mailAllView.backgroundColor = UIColor.init(hue: 0.15, saturation: 1, brightness: 0.94, alpha: 1.0)
+                
+                
+                // } else if translation.x < -100 {
+                //    rescheduleImageView.alpha = 1
                 
             }
             
@@ -116,6 +128,8 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
         } else if sender.state == UIGestureRecognizerState.Ended {
             print("ended")
             
+            
+            
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
                 // animate code
                 
@@ -125,10 +139,10 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 
                 
-                
                 }, completion: { (completed) -> Void in
                     //complete
                     
+                    //        self.rescheduleImageView.alpha = 1
                     self.listImageView.alpha = 1
                     self.deleteImageView.alpha = 1
                     self.laterImageView.alpha = 1
@@ -136,21 +150,23 @@ class MailboxViewController: UIViewController, UIGestureRecognizerDelegate {
                     
                     self.mailAllView.backgroundColor = UIColor.lightGrayColor()
                     
+                    self.rescheduleImageView.alpha = 0
+                    
                     
             })
             
             
-           
-                
-            }
-            
             
             
         }
+        
+        
+        
     }
-    
-    //  @IBAction func onTap(sender: UITapGestureRecognizer) {
-    //    print("tapped")
+}
+
+//  @IBAction func onTap(sender: UITapGestureRecognizer) {
+//    print("tapped")
 
 
 
